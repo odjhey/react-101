@@ -1,6 +1,6 @@
 import React from "react";
 //import JsDataStructPage from "./JsDataStructPage";
-import Compo from "./Props";
+import Compo from "./States";
 import "./App.css";
 
 function App() {

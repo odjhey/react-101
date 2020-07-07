@@ -1,22 +1,24 @@
-import React from "react";
+import React, { useState } from "react";
 
 const MyComponent = (props) => {
-  function hi() {
-    console.log("hi");
-  }
+  console.log("render");
+  const [counter, setCounter] = useState(1);
+  const [a, setA] = useState({ f: 2 });
 
   return (
     <div>
-      <h1>Props</h1>
+      <h1>States</h1>
+      <h1>{counter}</h1>
+      <button
+        onClick={() => {
+          setCounter((prev) => prev + 1);
+          setA((prev) => ({ ...prev, f: prev.f + 2 }));
+        }}
+      >
+        +
+      </button>
+      <pre>{JSON.stringify(a)}</pre>
       <ChildC name="john" lastname="doe" children="hello"></ChildC>
-      <ChildC name="john" lastname="doe" fnProp={hi}>
-        <p>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequuntur
-          ipsum rem explicabo inventore pariatur voluptatem sapiente soluta
-          atque quos corporis? Error, sit! Facere maiores ex quis, impedit harum
-          obcaecati corrupti.
-        </p>
-      </ChildC>
     </div>
   );
 };
