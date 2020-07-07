@@ -1,6 +1,6 @@
 import React from "react";
 //import JsDataStructPage from "./JsDataStructPage";
-import Compo from "./JsArrays";
+import Compo from "./Props";
 import "./App.css";
 
 function App() {
