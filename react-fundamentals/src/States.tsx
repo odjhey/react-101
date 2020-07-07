@@ -3,7 +3,7 @@ import React, { useState } from "react";
 const MyComponent = (props) => {
   console.log("render");
   const [counter, setCounter] = useState(1);
-  const [a, setA] = useState({ f: 2 });
+  const [a, setA] = useState({ f: 2, f2: "a" });
 
   return (
     <div>
